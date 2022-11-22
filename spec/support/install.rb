@@ -36,12 +36,7 @@ def platform_distribution_passenger
 end
 
 def nginx_user
-  case chefspec_platform
-  when 'debian', 'ubuntu'
-    'www-data'
-  else
-    'nginx'
-  end
+  'nginx'
 end
 
 def debian_9?

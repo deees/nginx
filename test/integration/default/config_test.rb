@@ -29,12 +29,7 @@ end
   end
 end
 
-process_owner = case os.family
-                when 'debian'
-                  'www-data'
-                else
-                  'nginx'
-                end
+process_owner = 'nginx'
 
 describe file('/etc/nginx/nginx.conf') do
   it { should exist }
