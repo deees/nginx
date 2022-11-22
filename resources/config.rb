@@ -146,8 +146,8 @@ action :create do
   end
 
   directory nginx_log_dir do
-    owner new_resource.owner
-    group new_resource.group
+    owner new_resource.process_user
+    group new_resource.process_group
     mode new_resource.folder_mode
   end
 
